@@ -48,7 +48,8 @@ int main(void) {
     printf("Shmid segment : %d\n", ring_queue->shmid);
 
     menu(ring_queue);
-
+    free_stack(&producers);
+    free_stack(&consumers);
     close_semaphores();
     return 0;
 }
